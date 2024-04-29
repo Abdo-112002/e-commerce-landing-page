@@ -1,0 +1,25 @@
+.buttonCom {
+    border-radius: $mainBorderRadius;
+    background-color: $mainColor;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn.btn-primary {
+    @extend .buttonCom;
+    &:hover {
+        background-color: $titleColor;
+    }
+}
+
+.btn.btn-outline-primary {
+    @extend .buttonCom;
+    background-color: transparent;
+    color: $mainColor;
+    border-color: $mainColor;
+    &:hover {
+        background-color: $mainColor;
+        color: $whiteColor;
+    }
+}
