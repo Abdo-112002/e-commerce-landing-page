@@ -6,9 +6,14 @@
     max-width: 130px;
     margin : 0px auto 15px auto;
     font-size: 16px;
+    line-height: 24px;
     font-weight: 400;
     text-align: center;
     color: $titleColor;
+    @include devices(medium) {
+        font-size: 14px;
+        line-height: 22px;
+    }
 }
 
 .sectionTitle {
@@ -17,9 +22,14 @@
     text-align: center;
     font-weight: 600;
     font-size: 32px;
+    line-height: 52px;
     color: $titleColor;
     position: relative;
     &::before {
         @extend .subTitle;
+    }
+    @include devices(medium) {
+        font-size: 28px;
+        line-height: 36px;
     }
 }

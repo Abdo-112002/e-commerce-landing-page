@@ -2,10 +2,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 
 body {
   font-family: var(--mainFont);
+}
+
+.pageWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+}
+
+.active {
+  font-weight: 500;
+  font-size: 14px;
+  color: #9057cd !important;
 }
 
 .buttonCom, .btn.btn-outline-primary, .btn.btn-primary {
@@ -14,6 +28,13 @@ body {
   padding: 12px 24px;
   font-size: 14px;
   font-weight: 500;
+  border-color: transparent;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 768px) {
+  .buttonCom, .btn.btn-outline-primary, .btn.btn-primary {
+    width: 100%;
+  }
 }
 
 .btn.btn-primary:hover {
@@ -36,9 +57,16 @@ body {
   max-width: 130px;
   margin: 0px auto 15px auto;
   font-size: 16px;
+  line-height: 24px;
   font-weight: 400;
   text-align: center;
   color: #402865;
+}
+@media only screen and (max-width: 768px) {
+  .subTitle, .sectionTitle::before {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .sectionTitle {
@@ -48,6 +76,199 @@ body {
   text-align: center;
   font-weight: 600;
   font-size: 32px;
+  line-height: 52px;
   color: #402865;
   position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .sectionTitle {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+.navbar__logo--img {
+  max-width: 140px;
+}
+.navbar__brand {
+  all: unset;
+  font-size: 16px;
+  color: #9057cd;
+  font-weight: 500;
+  margin-inline-start: 10px;
+}
+@media only screen and (max-width: 992px) {
+  .navbar__brand {
+    display: none;
+  }
+}
+.navbar__links .nav-link {
+  color: rgba(65, 41, 102, 0.6784313725);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 300ms ease-in-out;
+}
+.navbar__links .nav-link:hover {
+  color: #9057cd;
+}
+.navbar__links #langSelect {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.navbar__links #langSelect .lang-icon {
+  max-width: 15px;
+}
+.navbar__links #langSelect .langName {
+  color: #9057cd;
+  font-size: 16px;
+  font-weight: 400;
+}
+@media only screen and (max-width: 992px) {
+  .navbar__links .navbar-nav {
+    position: fixed;
+    top: 0;
+    inset-inline-start: -100%;
+    transition: 300ms ease-in-out;
+    width: 300px;
+    height: 100vh;
+    background-color: #F6F3FA;
+    padding: 50px 20px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .navbar__links .navbar-nav {
+    width: 70%;
+  }
+}
+.navbar__links .navbar-nav.active {
+  inset-inline-start: 0%;
+}
+@media only screen and (max-width: 992px) {
+  .navbar .JoinToday {
+    display: none;
+  }
+}
+.navbar .toggleMenue {
+  cursor: pointer;
+  display: none;
+  z-index: 1;
+}
+@media only screen and (max-width: 992px) {
+  .navbar .toggleMenue {
+    display: block;
+  }
+}
+
+.heroSection__content {
+  width: 100%;
+  height: 456px;
+  border-radius: 20px;
+  margin-top: 20px;
+  background-color: #F6F3FA;
+  padding: 0px 80px;
+}
+@media only screen and (max-width: 768px) {
+  .heroSection__content {
+    padding: 15px 15px 0px 15px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .heroSection__content {
+    height: auto;
+  }
+}
+.heroSection__content--img {
+  height: 100%;
+}
+.heroSection__content--img img {
+  display: block;
+  max-width: 450px;
+}
+.heroSection__content--title {
+  font-size: 48px;
+  color: #402865;
+  font-weight: 600;
+  max-width: 500px;
+  line-height: 72px;
+  position: relative;
+}
+.heroSection__content--title::before {
+  content: "";
+  display: block;
+  margin-bottom: 20px;
+  width: 48px;
+  height: 4px;
+  background-color: #9057cd;
+}
+@media only screen and (max-width: 768px) {
+  .heroSection__content--title {
+    font-size: 32px;
+    text-align: center;
+    max-width: 100%;
+    line-height: 48px;
+  }
+  .heroSection__content--title::before {
+    display: none;
+  }
+}
+.heroSection__content--desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: #5e443a;
+  line-height: 25px;
+  max-width: 416px;
+  padding-inline-end: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .heroSection__content--desc {
+    line-height: 24px;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+.heroSection__content .row {
+  height: 100%;
+}
+
+.employerBenefitsSection .sectionTitle {
+  margin-bottom: 40px;
+}
+.employerBenefitsSection__item--icon {
+  max-width: 58px;
+  margin: auto;
+}
+@media only screen and (max-width: 576px) {
+  .employerBenefitsSection__item--icon {
+    max-width: 48px;
+  }
+}
+.employerBenefitsSection__item--title {
+  font-weight: 500;
+  font-size: 24px;
+  color: #000000;
+}
+@media only screen and (max-width: 576px) {
+  .employerBenefitsSection__item--title {
+    font-size: 20px;
+  }
+}
+.employerBenefitsSection__item--desc {
+  font-weight: 400;
+  font-size: 16px;
+  color: #2b2b2b;
+}
+@media only screen and (max-width: 576px) {
+  .employerBenefitsSection__item--desc {
+    font-size: 20px;
+  }
+}
+.employerBenefitsSection .watchMore {
+  margin-top: 60px;
+}
+
+.howQsalaryWorkSection {
+  background-color: #F6F3FA;
+  padding: 100px 0px;
 }/*# sourceMappingURL=home.css.map */

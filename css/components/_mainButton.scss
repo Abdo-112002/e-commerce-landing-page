@@ -4,6 +4,11 @@
     padding: 12px 24px;
     font-size: 14px;
     font-weight: 500;
+    border-color: transparent ;
+    text-transform: uppercase;
+    @include devices(medium) {
+        width: 100%;
+    }
 }
 
 .btn.btn-primary {

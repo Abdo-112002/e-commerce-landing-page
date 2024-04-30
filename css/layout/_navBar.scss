@@ -1,0 +1,73 @@
+
+
+.navbar {
+    &__logo {
+        &--img {
+            max-width: 140px;
+        }
+    }
+    &__brand {
+        all: unset;
+        font-size: 16px;
+        color: $mainColor;
+        font-weight: 500;
+        margin-inline-start: 10px;
+        @include devices(large) {
+            display: none;
+        }
+    }
+    &__links {
+        .nav-link {
+            color: $navLinkColor;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 300ms ease-in-out;
+            &:hover {
+                color: $mainColor;
+            }
+        }
+        #langSelect {
+            cursor: pointer;
+            user-select: none;
+            .lang-icon {
+                max-width: 15px;
+            }
+            .langName {
+                color: $mainColor;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+        .navbar-nav {
+            @include devices(large) {
+                position: fixed;
+                top: 0;
+                inset-inline-start: -100%;
+                transition: 300ms ease-in-out;
+                width: 300px;
+                height: 100vh;
+                background-color: #F6F3FA;
+                padding: 50px 20px;
+            }
+            @include devices(small) {
+                width: 70%;
+            }
+            &.active {
+                inset-inline-start: 0%;
+            }
+        }
+    }
+    .JoinToday {
+        @include devices(large) {
+            display: none;
+        }
+    }
+    .toggleMenue {
+        cursor: pointer;
+        display: none;
+        z-index: 1;
+        @include devices(large) {
+            display: block;
+        }
+    }
+}

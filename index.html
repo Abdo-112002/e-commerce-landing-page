@@ -24,9 +24,356 @@
         <link rel="stylesheet" href="./css/pages/home.css" />
     </head>
     <body>
-        <div class="container">
-            
-        </div>
+        <section class="pageWrapper">
+            <section class="heroSection">
+                <div class="container">
+                    <nav class="navbar py-4 navbar-expand-lg">
+                        <div class="container-fluid">
+                            <div class="navbar__logo d-flex align-items-center">
+                                <img
+                                    class="navbar__logo--img"
+                                    src="./assets/logo.svg"
+                                    alt="our-logo"
+                                />
+                                <a
+                                    data-i18n="brandName"
+                                    class="navbar__brand"
+                                    href="#"
+                                    >| سيولة بكل سهولة</a
+                                >
+                            </div>
+                            <div
+                                class="navbar__links d-flex align-items-center column-gap-4"
+                            >
+                                <div
+                                    id="navBarContent"
+                                    class="navbar-nav column-gap-2"
+                                >
+                                    <a
+                                        data-i18n="navLink1"
+                                        class="nav-link active"
+                                        aria-current="page"
+                                        href="#"
+                                        >الرئيسية</a
+                                    >
+                                    <a
+                                        data-i18n="navLink2"
+                                        class="nav-link"
+                                        href="#"
+                                        >نبذة عنا</a
+                                    >
+                                    <a
+                                        data-i18n="navLink3"
+                                        class="nav-link"
+                                        href="#"
+                                        >مزايا صاحب العمل</a
+                                    >
+                                    <a
+                                        data-i18n="navLink4"
+                                        class="nav-link"
+                                        href="#"
+                                        >مزايا الموظفين</a
+                                    >
+                                    <a
+                                        data-i18n="navLink5"
+                                        class="nav-link"
+                                        href="#"
+                                        >تواصل معنا</a
+                                    >
+                                </div>
+                                <div
+                                    class="d-flex align-items-center column-gap-4"
+                                >
+                                    <div
+                                        id="langSelect"
+                                        class="d-flex align-items-center column-gap-1"
+                                    >
+                                        <img
+                                            id="lang-icon"
+                                            class="lang-icon"
+                                            src="./assets/icons/en-icon.svg"
+                                            alt="lang icon"
+                                        />
+                                        <span id="lang-name" class="langName"
+                                            >English</span
+                                        >
+                                    </div>
+                                    <button
+                                        data-i18n="JoinToday"
+                                        type="button"
+                                        class="btn JoinToday btn-outline-primary"
+                                    >
+                                        انضم الآن
+                                    </button>
+                                </div>
+                                <div id="toggleMenue" class="toggleMenue">
+                                    <img
+                                        src="./assets/icons/open-menu-icon.svg"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="heroSection__content">
+                        <div class="row align-items-center gap-2">
+                            <div class="col">
+                                <h1
+                                    data-i18n="heroTitle"
+                                    class="heroSection__content--title"
+                                >
+                                    كيوسالاري، البوابة المالية لتوفير الراحة
+                                    لموظفيك
+                                </h1>
+                                <p
+                                    data-i18n="heroDescription"
+                                    class="heroSection__content--desc"
+                                >
+                                    مكِّن موظفيك من الوصول إلى مستحقاتهم المالية
+                                    بسهولة وفي أي وقت، ليكون كل يوم هو يوم
+                                    الراتب.
+                                </p>
+                                <div
+                                    class="d-flex align-items-center justify-content-start gap-2 flex-wrap"
+                                >
+                                    <button
+                                        data-i18n="heroBtn1"
+                                        type="button"
+                                        class="btn btn-primary"
+                                    >
+                                        اطلب عرضاً توضيحياً الآن
+                                    </button>
+                                    <button
+                                        type="button"
+                                        data-i18n="heroBtn2"
+                                        class="btn btn-outline-primary"
+                                    >
+                                        حـمّـل الـتطبـيـق
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                class="col heroSection__content--img d-flex align-items-end justify-content-end"
+                            >
+                                <img
+                                    width="450"
+                                    src="./assets/images/heroBg.svg"
+                                    alt="hero section image"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="employerBenefitsSection">
+                <div class="container text-center">
+                    <h2 data-i18n="employerBenefitsTitle" class="sectionTitle">
+                        مزايا صاحب العمل
+                    </h2>
+                    <div class="row row-cols-2 align-items-start row-cols-lg-4 g-2 g-lg-4">
+                        <div
+                            class="col employerBenefitsSection__item d-flex flex-column gap-2"
+                        >
+                            <img
+                                class="employerBenefitsSection__item--icon"
+                                src="./assets/images/employerBenefitsIcon1.svg"
+                                alt="صفر تكلفة"
+                            />
+                            <h3
+                                data-i18n="employerBenefitsItemTitle1"
+                                class="employerBenefitsSection__item--title"
+                            >
+                                صفر تكلفة
+                            </h3>
+                            <p
+                                data-i18n="employerBenefitsItemDesc1"
+                                class="employerBenefitsSection__item-desc"
+                            >
+                                بدون رسوم خفية أو مفاجئة أو إضافية.
+                            </p>
+                        </div>
+                        <div
+                            class="col employerBenefitsSection__item d-flex flex-column gap-2"
+                        >
+                            <img
+                                class="employerBenefitsSection__item--icon"
+                                src="./assets/images/employerBenefitsIcon2.svg"
+                                alt="صفر فوائد"
+                            />
+                            <h3
+                                data-i18n="employerBenefitsItemTitle2"
+                                class="employerBenefitsSection__item--title"
+                            >
+                                صفر فوائد
+                            </h3>
+                            <p
+                                data-i18n="employerBenefitsItemDesc2"
+                                class="employerBenefitsSection__item-desc"
+                            >
+                                متوافق مع مبادئ الشريعة الإسلامية.
+                            </p>
+                        </div>
+                        <div
+                            class="col employerBenefitsSection__item d-flex flex-column gap-2"
+                        >
+                            <img
+                                class="employerBenefitsSection__item--icon"
+                                src="./assets/images/employerBenefitsIcon3.svg"
+                                alt="توفير الوقت"
+                            />
+                            <h3
+                                data-i18n="employerBenefitsItemTitle3"
+                                class="employerBenefitsSection__item--title"
+                            >
+                                توفير الوقت
+                            </h3>
+                            <p
+                                data-i18n="employerBenefitsItemDesc3"
+                                class="employerBenefitsSection__item-desc"
+                            >
+                                يخفف أعباء قسم الموارد البشرية في شركتك.
+                            </p>
+                        </div>
+                        <div
+                            class="col employerBenefitsSection__item d-flex flex-column gap-2"
+                        >
+                            <img
+                                class="employerBenefitsSection__item--icon"
+                                src="./assets/images/employerBenefitsIcon4.svg"
+                                alt=" سيولة بسهولة"
+                            />
+                            <h3
+                                data-i18n="employerBenefitsItemTitle4"
+                                class="employerBenefitsSection__item--title"
+                            >
+                                سيولة بسهولة
+                            </h3>
+                            <p
+                                data-i18n="employerBenefitsItemDesc4"
+                                class="employerBenefitsSection__item-desc"
+                            >
+                                لن يحتاج موظفوك للاستدانة بعد الآن.
+                            </p>
+                        </div>
+                        <div
+                            class="col employerBenefitsSection__item d-flex flex-column gap-2"
+                        >
+                            <img
+                                class="employerBenefitsSection__item--icon"
+                                src="./assets/images/employerBenefitsIcon5.svg"
+                                alt="استرداد المال"
+                            />
+                            <h3
+                                data-i18n="employerBenefitsItemTitle5"
+                                class="employerBenefitsSection__item--title"
+                            >
+                                استرداد المال
+                            </h3>
+                            <p
+                                data-i18n="employerBenefitsItemDesc5"
+                                class="employerBenefitsSection__item-desc"
+                            >
+                                اقتطاع تلقائي للمبالغ المسحوبة عند تحويل
+                                الرواتب.
+                            </p>
+                        </div>
+                        <div
+                            class="col employerBenefitsSection__item d-flex flex-column gap-2"
+                        >
+                            <img
+                                class="employerBenefitsSection__item--icon"
+                                src="./assets/images/employerBenefitsIcon6.svg"
+                                alt="وصول سريع"
+                            />
+                            <h3
+                                data-i18n="employerBenefitsItemTitle6"
+                                class="employerBenefitsSection__item--title"
+                            >
+                                وصول سريع
+                            </h3>
+                            <p
+                                data-i18n="employerBenefitsItemDesc6"
+                                class="employerBenefitsSection__item-desc"
+                            >
+                                تأمين الاحتياجات المالية لموظفيك متى أرادوا.
+                            </p>
+                        </div>
+                        <div
+                            class="col employerBenefitsSection__item d-flex flex-column gap-2"
+                        >
+                            <img
+                                class="employerBenefitsSection__item--icon"
+                                src="./assets/images/employerBenefitsIcon7.svg"
+                                alt="إنتاجية أعلى"
+                            />
+                            <h3
+                                data-i18n="employerBenefitsItemTitle7"
+                                class="employerBenefitsSection__item--title"
+                            >
+                                إنتاجية أعلى
+                            </h3>
+                            <p
+                                data-i18n="employerBenefitsItemDesc7"
+                                class="employerBenefitsSection__item-desc"
+                            >
+                                إزالة الصعوبات المالية عن موظفيك ليكون تركيزهم
+                                على عملهم فقط.
+                            </p>
+                        </div>
+                        <div
+                            class="col employerBenefitsSection__item d-flex flex-column gap-2"
+                        >
+                            <img
+                                class="employerBenefitsSection__item--icon"
+                                src="./assets/images/employerBenefitsIcon8.svg"
+                                alt="الحد من التسرب الوظيفي"
+                            />
+                            <h3
+                                data-i18n="employerBenefitsItemTitle8"
+                                class="employerBenefitsSection__item--title"
+                            >
+                                الحد من التسرب الوظيفي
+                            </h3>
+                            <p
+                                data-i18n="employerBenefitsItemDesc8"
+                                class="employerBenefitsSection__item-desc"
+                            >
+                                تحسين الرضا والولاء الوظيفي لموظفيك.
+                            </p>
+                        </div>
+                    </div>
+                    <button data-i18n="watchMore" class="btn watchMore btn-primary">شـاهد الـمـزيـد</button>
+                </div>
+            </section>
+
+            <section class="howQsalaryWorkSection">
+                <div class="container text-center">
+                    <h2 data-subTitle="؟Qsalaryكيف يعمل تطبيق " class="sectionTitle">
+                        خطوات بسيطة3حرر موظفيك مالياً بـ 
+                    </h2>
+                    <div class="row row-cols-1 align-items-start row-cols-md-2 row-cols-lg-3 g-2 g-lg-4">
+                        <div class="col">
+                            <img src="./assets/images/HowQsalaryWork1.svg" alt="">
+                            <h3>سجل شركتك</h3>
+                            <p> ستكون عملية التسجيل سهلة وبسيطة، من غيرQsalary
+                                مع أي تعقيدات أو عراقيل، فقط تواصل معنا.</p>
+                        </div>
+                        <div class="col">
+                            <img src="./assets/images/HowQsalaryWork2.svg" alt="">
+                            <h3>أضف موظفيك</h3>
+                            <p>أضف موظفيك وسجل بياناتهم بنقرات بسيطة، أو اترك لنا هذه المهمة.</p>
+                        </div>
+                        <div class="col">
+                            <img src="./assets/images/HowQsalaryWork3.svg" alt="">
+                            <h3>اختر الحد الأقصى للسحب لكل موظف</h3>
+                            <p> امنح موظفيك إمكانية الحصول على مستحقاتهم  بسهولة بما يتوافق مع قوانين حماية الأجور</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
 
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

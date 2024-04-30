@@ -1,15 +1,26 @@
-
+// global variables
 const langSelect = document.getElementById("langSelect");
+const langIcon = document.getElementById("lang-icon");
+const langName = document.getElementById("lang-name");
+const toggleNavBtn = document.getElementById("toggleMenue");
+let defLang =  localStorage.getItem('lang') || "ar";
 
-langSelect?.addEventListener("change", (e) => {
-    fetchLang(e.target.value);
+toggleNavBtn.addEventListener("click", () => {
+    document.getElementById("navBarContent").classList.toggle("active");
+});
+
+langSelect?.addEventListener("click", (e) => {
+    defLang = defLang === "ar" ? "en" : "ar";
+    localStorage.setItem('lang',defLang);
+    fetchLang(defLang);
 });
 
 document.addEventListener('DOMContentLoaded',() => {
-    let defLang = window.navigator.language.split("-")?.[0];
+    // let defLang = window.navigator.language.split("-")?.[0];
     if(langSelect) {
-        langSelect.value = defLang;
-        fetchLang(defLang || langSelect.value);
+        // langSelect.value = defLang;
+        // fetchLang(langSelect.value || defLang);
+        fetchLang(localStorage.getItem('lang') || defLang);
     }
 });
 
@@ -27,5 +38,7 @@ function changeLang(langData , lang) {
         item.textContent = langData[key];
     });
     document.dir = lang === 'en' ? 'ltr' : "rtl";
+    langName.textContent = lang === 'en' ? 'العربيه' : "English";
+    langIcon.src = lang === 'en' ? "./assets/icons/ar-icon.svg" :  './assets/icons/en-icon.svg';
 }
 
