@@ -467,7 +467,7 @@ body {
 @media only screen and (max-width: 768px) {
   .downloadAppPanner__item img.imgPanner {
     margin-top: 30px;
-    max-width: 330px;
+    max-width: 100%;
   }
 }
 .downloadAppPanner__item--title {

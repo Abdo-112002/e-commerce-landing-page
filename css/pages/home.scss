@@ -265,7 +265,7 @@
             }
             @include devices(medium) {
                 margin-top: 30px;
-                max-width: 330px;
+                max-width: 100%;
             }
         }
         &--title {
