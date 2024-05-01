@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded',() => {
     }
 });
 
-const fetchLang = (lang) => {
+const fetchLang =  async(lang) => {
     fetch(`/translation/${lang}.json`)
     .then(response => {
         if (!response.ok) {
@@ -35,7 +35,6 @@ const fetchLang = (lang) => {
     .then(data => changeLang(data, lang))
     .catch(error => console.log("Error fetching JSON:", error));
 }
-
 
 function changeLang(langData , lang) {
     let allElements = document.querySelectorAll('[data-i18n]');
