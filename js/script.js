@@ -26,10 +26,16 @@ document.addEventListener('DOMContentLoaded',() => {
 
 const fetchLang = (lang) => {
     fetch(`/translation/${lang}.json`)
-    .then(response => response.json())
-    .then(data => changeLang(data , lang))
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => changeLang(data, lang))
     .catch(error => console.error("Error fetching JSON:", error));
 }
+
 
 function changeLang(langData , lang) {
     let allElements = document.querySelectorAll('[data-i18n]');
