@@ -33,7 +33,7 @@ const fetchLang = (lang) => {
         return response.json();
     })
     .then(data => changeLang(data, lang))
-    .catch(error => console.error("Error fetching JSON:", error));
+    .catch(error => console.log("Error fetching JSON:", error));
 }
 
 
