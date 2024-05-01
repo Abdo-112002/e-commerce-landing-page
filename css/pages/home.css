@@ -98,6 +98,21 @@ body {
   }
 }
 
+#langSelect {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#langSelect .lang-icon {
+  max-width: 15px;
+}
+#langSelect .langName {
+  color: #9057cd;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .navbar {
   z-index: 10;
 }
@@ -124,20 +139,6 @@ body {
 }
 .navbar__links .nav-link:hover {
   color: #9057cd;
-}
-.navbar__links #langSelect {
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-.navbar__links #langSelect .lang-icon {
-  max-width: 15px;
-}
-.navbar__links #langSelect .langName {
-  color: #9057cd;
-  font-size: 16px;
-  font-weight: 400;
 }
 @media only screen and (max-width: 992px) {
   .navbar__links .navbar-nav {
@@ -173,6 +174,56 @@ body {
   .navbar .toggleMenue {
     display: block;
   }
+}
+
+.footer__content {
+  border-radius: 20px;
+  background-color: #F6F3FA;
+  padding: 20px 80px;
+}
+@media only screen and (max-width: 768px) {
+  .footer__content {
+    padding: 20px 20px;
+    text-align: center;
+  }
+}
+.footer__content--downloadApp {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 15px;
+}
+@media only screen and (max-width: 768px) {
+  .footer__content--downloadApp {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.footer__content--downloadApp img {
+  display: block;
+  max-width: 145px;
+}
+.footer__content .copyRigth {
+  display: block;
+  color: #2b2b2b;
+  text-align: end;
+}
+@media only screen and (max-width: 576px) {
+  .footer__content .copyRigth {
+    text-align: center;
+  }
+}
+.footer__content--links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer__content--links .nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(65, 41, 102, 0.6784313725);
 }
 
 .heroSection__content {
@@ -622,7 +673,7 @@ body {
 }
 .followUsSection__sendEmail input {
   min-height: 48px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 .followUsSection__sosialIcons {
   margin-top: 20px;

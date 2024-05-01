@@ -4,10 +4,10 @@
 @import "../helpers/helper", "../helpers/mixin";
 
 // components that use in this page
-@import "../components/mainButton", "../components/tilteComponents";
+@import "../components/mainButton", "../components/tilteComponents" , "../components/lang_select";
 
 // layout
-@import "../layout/navBar";
+@import "../layout/navBar" , "../layout/footer";
 
 // start code for home page
 .heroSection__content {
@@ -406,9 +406,9 @@
 .followUsSection {
     .sectionTitle {
         margin: 0px;
-       text-align: justify;
+        text-align: justify;
         &::before {
-           text-align: justify;
+            text-align: justify;
             max-width: 100%;
         }
     }
@@ -424,7 +424,7 @@
         }
         input {
             min-height: 48px;
-            background-color: #FAFAFA;
+            background-color: #fafafa;
         }
     }
     &__sosialIcons {

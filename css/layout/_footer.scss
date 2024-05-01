@@ -1,0 +1,45 @@
+.footer {
+    &__content {
+        border-radius: 20px;
+        background-color: $sectionBgColor;
+        padding: 20px 80px;
+        @include devices(medium) {
+            padding: 20px 20px;
+            text-align: center;
+        }
+        &--downloadApp {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 15px;
+            @include devices(medium) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            img {
+                display: block;
+                max-width: 145px;
+            }
+        }
+        .copyRigth {
+            display: block;
+            color: $secondTextColor;
+            text-align: end;
+            @include devices(small) {
+                text-align: center;
+            }
+        }
+        &--links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            .nav-link {
+                font-size: 14px;
+                font-weight: 500;
+                color: #412966ad;
+            }
+        }
+    }
+}

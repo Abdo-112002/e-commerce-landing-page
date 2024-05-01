@@ -73,5 +73,9 @@
     "socialSubTitle" : "Follow Us" ,
     "socialTitle" : "Social Media Accounts",
     "subscribeBtn" : "Subscribe",
-    "emailPlaceholder" : "Email address"
+    "emailPlaceholder" : "Email address",
+    "copyRight" : "All rights reserved© Qsalary 2023",
+    "footerLink1" : "Blog",
+    "footerLink2" : "FAQ",
+    "footerLink3" : "Privacy Policy"
 }
