@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded',() => {
 });
 
 const fetchLang = (lang) => {
-    fetch(`../translation/${lang}.json`)
+    fetch(`/translation/${lang}.json`)
     .then(response => response.json())
     .then(data => changeLang(data , lang))
     .catch(error => console.error("Error fetching JSON:", error));
