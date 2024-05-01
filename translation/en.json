@@ -72,5 +72,6 @@
     "supscripeSubTitle" : "Stay in the know",
     "socialSubTitle" : "Follow Us" ,
     "socialTitle" : "Social Media Accounts",
-    "subscribeBtn" : "Subscribe"
+    "subscribeBtn" : "Subscribe",
+    "emailPlaceholder" : "Email address"
 }

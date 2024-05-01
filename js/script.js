@@ -41,6 +41,9 @@ function changeLang(langData , lang) {
             let subTitleKey = item.getAttribute('data-i18n-subTitle');
             item.setAttribute("data-subTitle", langData[subTitleKey]);
         }
+        if(item.getAttribute('placeholder')){
+            item.setAttribute("placeholder", langData[key]);
+        }
     });
     // change dir page
     document.dir = lang === 'en' ? 'ltr' : "rtl";

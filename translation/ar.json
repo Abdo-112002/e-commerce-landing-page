@@ -71,5 +71,6 @@
     "supscripeSubTitle" : "ابقى على اطلاع",
     "socialSubTitle" : "تابعنا على" ,
     "socialTitle" : "منصات التواصل الإجتماعي",
-    "subscribeBtn" : "إشتراك"
+    "subscribeBtn" : "إشتراك",
+    "emailPlaceholder" : "بريدك الإلكتروني"
 }
