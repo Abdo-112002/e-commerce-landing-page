@@ -6,6 +6,36 @@
         <link rel="icon" href="./assets/logo.svg" />
         <title>كيوسالاري</title>
 
+        <!-- pre load hero section image to get best first contentful paint -->
+        <link
+            rel="preload"
+            fetchpriority="high"
+            href="./assets/images/heroBg.svg"
+            as="image"
+            type="image/svg"
+        />
+
+        <!-- meta edge -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- meta description  -->
+        <meta
+            name="description"
+            content="مكِّن موظفيك من الوصول إلى مستحقاتهم المالية بسهولة وفي أي  وقت، ليكون كل يوم هو يوم الراتب."
+        />
+        <!-- meta keywords -->
+        <meta name="keywords" content="#" />
+        <!-- meta author -->
+        <meta name="author" content="Recapet Company" />
+        <!-- open graph protocol meta tags -->
+        <meta name="og:title" property="og:title" content="كيوسالاري" />
+        <meta
+            name="og:description"
+            property="og:description"
+            content="مكِّن موظفيك من الوصول إلى مستحقاتهم المالية بسهولة وفي أي  وقت، ليكون كل يوم هو يوم الراتب."
+        />
+        <meta name="og:image" property="og:image" content="#" />
+
         <!-- custom font from google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -117,8 +147,8 @@
                     </nav>
 
                     <div class="heroSection__content">
-                        <div class="row align-items-center gap-2">
-                            <div class="col">
+                        <div class="row row-cols-1 row-cols-lg-2 align-items-center">
+                            <div class="col d-flex flex-column align-items-start gap-2">
                                 <h1
                                     data-i18n="heroTitle"
                                     class="heroSection__content--title"
@@ -172,7 +202,9 @@
                     <h2 data-i18n="employerBenefitsTitle" class="sectionTitle">
                         مزايا صاحب العمل
                     </h2>
-                    <div class="row row-cols-2 align-items-start row-cols-lg-4 g-2 g-lg-4">
+                    <div
+                        class="row row-cols-2 align-items-start row-cols-lg-4 g-2 g-lg-4"
+                    >
                         <div
                             class="col employerBenefitsSection__item d-flex flex-column gap-2"
                         >
@@ -180,6 +212,7 @@
                                 class="employerBenefitsSection__item--icon"
                                 src="./assets/images/employerBenefitsIcon1.svg"
                                 alt="صفر تكلفة"
+                                loading="lazy"
                             />
                             <h3
                                 data-i18n="employerBenefitsItemTitle1"
@@ -201,6 +234,7 @@
                                 class="employerBenefitsSection__item--icon"
                                 src="./assets/images/employerBenefitsIcon2.svg"
                                 alt="صفر فوائد"
+                                loading="lazy"
                             />
                             <h3
                                 data-i18n="employerBenefitsItemTitle2"
@@ -222,6 +256,7 @@
                                 class="employerBenefitsSection__item--icon"
                                 src="./assets/images/employerBenefitsIcon3.svg"
                                 alt="توفير الوقت"
+                                loading="lazy"
                             />
                             <h3
                                 data-i18n="employerBenefitsItemTitle3"
@@ -243,6 +278,7 @@
                                 class="employerBenefitsSection__item--icon"
                                 src="./assets/images/employerBenefitsIcon4.svg"
                                 alt=" سيولة بسهولة"
+                                loading="lazy"
                             />
                             <h3
                                 data-i18n="employerBenefitsItemTitle4"
@@ -264,6 +300,7 @@
                                 class="employerBenefitsSection__item--icon"
                                 src="./assets/images/employerBenefitsIcon5.svg"
                                 alt="استرداد المال"
+                                loading="lazy"
                             />
                             <h3
                                 data-i18n="employerBenefitsItemTitle5"
@@ -286,6 +323,7 @@
                                 class="employerBenefitsSection__item--icon"
                                 src="./assets/images/employerBenefitsIcon6.svg"
                                 alt="وصول سريع"
+                                loading="lazy"
                             />
                             <h3
                                 data-i18n="employerBenefitsItemTitle6"
@@ -307,6 +345,7 @@
                                 class="employerBenefitsSection__item--icon"
                                 src="./assets/images/employerBenefitsIcon7.svg"
                                 alt="إنتاجية أعلى"
+                                loading="lazy"
                             />
                             <h3
                                 data-i18n="employerBenefitsItemTitle7"
@@ -329,6 +368,7 @@
                                 class="employerBenefitsSection__item--icon"
                                 src="./assets/images/employerBenefitsIcon8.svg"
                                 alt="الحد من التسرب الوظيفي"
+                                loading="lazy"
                             />
                             <h3
                                 data-i18n="employerBenefitsItemTitle8"
@@ -344,37 +384,562 @@
                             </p>
                         </div>
                     </div>
-                    <button data-i18n="watchMore" class="btn watchMore btn-primary">شـاهد الـمـزيـد</button>
+                    <button
+                        data-i18n="watchMore"
+                        class="btn watchMore btn-primary"
+                    >
+                        شـاهد الـمـزيـد
+                    </button>
                 </div>
             </section>
 
             <section class="howQsalaryWorkSection">
                 <div class="container text-center">
-                    <h2 data-subTitle="؟Qsalaryكيف يعمل تطبيق " class="sectionTitle">
-                        خطوات بسيطة3حرر موظفيك مالياً بـ 
+                    <h2
+                        data-subTitle="؟Qsalaryكيف يعمل تطبيق "
+                        class="sectionTitle"
+                        data-i18n="howQsalaryWorkSectionTitle"
+                        data-i18n-subTitle="howQsalaryWorkSectionSubTitle"
+                    >
+                        خطوات بسيطة3حرر موظفيك مالياً بـ
                     </h2>
-                    <div class="row row-cols-1 align-items-start row-cols-md-2 row-cols-lg-3 g-2 g-lg-4">
+                    <div
+                        class="row row-cols-1 align-items-start row-cols-md-2 mt-4 row-cols-lg-3 justify-content-between"
+                    >
+                        <div class="col howQsalaryWorkSection__item">
+                            <img
+                                class="howQsalaryWorkSection__item--img"
+                                src="./assets/images/HowQsalaryWork1.svg"
+                                alt="سجل شركتك"
+                                loading="lazy"
+                            />
+                            <div>
+                                <h3
+                                    data-i18n="howQsalaryWorkSectionItem1-Title"
+                                    class="howQsalaryWorkSection__item--title"
+                                >
+                                    سجل شركتك
+                                </h3>
+                                <p
+                                    data-i18n="howQsalaryWorkSectionItem1-Desc"
+                                    class="howQsalaryWorkSection__item--desc"
+                                >
+                                    ستكون عملية التسجيل سهلة وبسيطة، من
+                                    غيرQsalary مع أي تعقيدات أو عراقيل، فقط
+                                    تواصل معنا.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col howQsalaryWorkSection__item">
+                            <img
+                                class="howQsalaryWorkSection__item--img"
+                                src="./assets/images/HowQsalaryWork2.svg"
+                                alt="أضف موظفيك"
+                                loading="lazy"
+                            />
+                            <div>
+                                <h3
+                                    data-i18n="howQsalaryWorkSectionItem2-Title"
+                                    class="howQsalaryWorkSection__item--title"
+                                >
+                                    أضف موظفيك
+                                </h3>
+                                <p
+                                    data-i18n="howQsalaryWorkSectionItem2-Desc"
+                                    class="howQsalaryWorkSection__item--desc"
+                                >
+                                    أضف موظفيك وسجل بياناتهم بنقرات بسيطة، أو
+                                    اترك لنا هذه المهمة.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col howQsalaryWorkSection__item">
+                            <img
+                                class="howQsalaryWorkSection__item--img"
+                                src="./assets/images/HowQsalaryWork3.svg"
+                                alt="اختر الحد الأقصى للسحب لكل موظف"
+                                loading="lazy"
+                            />
+                            <div>
+                                <h3
+                                    data-i18n="howQsalaryWorkSectionItem3-Title"
+                                    class="howQsalaryWorkSection__item--title"
+                                >
+                                    اختر الحد الأقصى للسحب لكل موظف
+                                </h3>
+                                <p
+                                    data-i18n="howQsalaryWorkSectionItem3-Desc"
+                                    class="howQsalaryWorkSection__item--desc"
+                                >
+                                    امنح موظفيك إمكانية الحصول على مستحقاتهم
+                                    بسهولة بما يتوافق مع قوانين حماية الأجور
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="TakingYourEmployeesSection">
+                <div class="container text-center">
+                    <h2
+                        data-i18n="TakingYourEmployeesSectionTitle"
+                        class="sectionTitle"
+                    >
+                        َلّص موظفيك من قلق الضغوطات المالية
+                    </h2>
+                    <div
+                        class="row row-cols-1 row-cols-md-2 align-items-start row-cols-lg-3 g-2 g-lg-4"
+                    >
+                        <div class="col TakingYourEmployeesSection__item">
+                            <h3 class="TakingYourEmployeesSection__item--title">
+                                72%
+                            </h3>
+                            <p
+                                data-i18n="TakingYourEmployeesSectionItem1-desc"
+                                class="TakingYourEmployeesSection__item--desc"
+                            >
+                                من الأفراد يمرون بصعوبات وضائقات مالية مرة
+                                سنوياً على الأقل
+                            </p>
+                        </div>
+                        <div class="col TakingYourEmployeesSection__item">
+                            <h3 class="TakingYourEmployeesSection__item--title">
+                                300 $ᵏ
+                            </h3>
+                            <p
+                                data-i18n="TakingYourEmployeesSectionItem2-desc"
+                                class="TakingYourEmployeesSection__item--desc"
+                            >
+                                هي الكلفة السنوية للخسارة بسبب نقص إنتاجية
+                                الموظفين الذين يعانون من ضغوطات مالية
+                            </p>
+                        </div>
+                        <div class="col TakingYourEmployeesSection__item">
+                            <h3 class="TakingYourEmployeesSection__item--title">
+                                20%
+                            </h3>
+                            <p
+                                data-i18n="TakingYourEmployeesSectionItem3-desc"
+                                class="TakingYourEmployeesSection__item--desc"
+                            >
+                                من نسب استقالة الموظفين ترجع إلى الضغوطات
+                                المالية
+                            </p>
+                        </div>
+                    </div>
+                    <button
+                        data-i18n="requsetDemo"
+                        class="btn mt-4 btn-primary"
+                    >
+                        اطـلـب عرضـاً توضـيـحـيـاً الـآن
+                    </button>
+                </div>
+            </section>
+
+            <div class="centerLine"></div>
+
+            <section class="employeeBenefitsSection">
+                <div class="container text-center">
+                    <h2
+                        data-i18n="employeeBenefitsSectionTitle"
+                        class="sectionTitle"
+                    >
+                        مزايا الموظفين
+                    </h2>
+                    <div
+                        class="row row-cols-1 row-cols-md-2 align-items-start justify-content-center row-cols-lg-3 g-2 g-lg-4"
+                    >
+                        <div class="col employeeBenefitsSection__item">
+                            <img class="employeeBenefitsSection__item--img"
+                            loading="lazy"
+                            src="./assets/images/EmployeeBenefitsIcon-1.svg"
+                            alt="24/7سيولة مالية فورية "">
+                            <h3
+                                data-i18n="employeeBenefitsSectionItem1-title"
+                                class="employeeBenefitsSection__item--title"
+                            >
+                                24/7سيولة مالية فورية
+                            </h3>
+                            <p
+                                data-i18n="employeeBenefitsSectionItem1-desc"
+                                class="employeeBenefitsSection__item--desc"
+                            >
+                                هل أنت بحاجة إلى مصاريف طارئة؟ احصل على السيولة
+                                بضغطة زر.
+                            </p>
+                        </div>
+
+                        <div class="col employeeBenefitsSection__item">
+                            <img
+                                class="employeeBenefitsSection__item--img"
+                                loading="lazy"
+                                src="./assets/images/EmployeeBenefitsIcon-2.svg"
+                                alt="لا تأخير في صرف مستحقاتك"
+                            />
+                            <h3
+                                data-i18n="employeeBenefitsSectionItem2-title"
+                                class="employeeBenefitsSection__item--title"
+                            >
+                                لا تأخير في صرف مستحقاتك
+                            </h3>
+                            <p
+                                data-i18n="employeeBenefitsSectionItem2-desc"
+                                class="employeeBenefitsSection__item--desc"
+                            >
+                                لن تشكل الإجراءات الإدارية عائقاً للحصول على
+                                مستحقاتك المالية.
+                            </p>
+                        </div>
+                        <div class="col employeeBenefitsSection__item">
+                            <img
+                                class="employeeBenefitsSection__item--img"
+                                loading="lazy"
+                                src="./assets/images/EmployeeBenefitsIcon-3.svg"
+                                alt="لن يفوتك أي عرض ترويجي"
+                            />
+                            <h3
+                                data-i18n="employeeBenefitsSectionItem3-title"
+                                class="employeeBenefitsSection__item--title"
+                            >
+                                لن يفوتك أي عرض ترويجي
+                            </h3>
+                            <p
+                                data-i18n="employeeBenefitsSectionItem3-desc"
+                                class="employeeBenefitsSection__item--desc"
+                            >
+                                لن تكون نقص السيولة سبباً في تفويت أي خصم على
+                                الشراء بعد الآن.
+                            </p>
+                        </div>
+                        <div class="col employeeBenefitsSection__item">
+                            <img
+                                class="employeeBenefitsSection__item--img"
+                                loading="lazy"
+                                src="./assets/images/EmployeeBenefitsIcon-4.svg"
+                                alt="إدارة مصاريفك من مكان واحد"
+                            />
+                            <h3
+                                data-i18n="employeeBenefitsSectionItem4-title"
+                                class="employeeBenefitsSection__item--title"
+                            >
+                                إدارة مصاريفك من مكان واحد
+                            </h3>
+                            <p
+                                data-i18n="employeeBenefitsSectionItem4-desc"
+                                class="employeeBenefitsSection__item--desc"
+                            >
+                                تمتع بتطبيق بسيط وسهل يُظهر المبلغ المتبقي من
+                                مستحقاتك من خلال هاتفك الذكي.
+                            </p>
+                        </div>
+                        <div class="col employeeBenefitsSection__item">
+                            <img
+                                class="employeeBenefitsSection__item--img"
+                                loading="lazy"
+                                src="./assets/images/EmployeeBenefitsIcon-5.svg"
+                                alt="% فوائد0رسوم ثابتة، "
+                            />
+                            <h3
+                                data-i18n="employeeBenefitsSectionItem5-title"
+                                class="employeeBenefitsSection__item--title"
+                            >
+                                % فوائد0رسوم ثابتة،
+                            </h3>
+                            <p
+                                data-i18n="employeeBenefitsSectionItem5-desc"
+                                class="employeeBenefitsSection__item--desc"
+                            >
+                                لن تُطبَّق أية فوائد على أي مبلغ تقوم بسحبه،
+                                وإنَّما رسوم ثابتة لكل عملية سحب.
+                            </p>
+                        </div>
+                    </div>
+                    <button data-i18n="watchMore" class="btn btn-primary">
+                        شـاهد الـمـزيـد
+                    </button>
+                </div>
+            </section>
+
+            <section class="downloadAppPanner">
+                <div class="container">
+                    <div class="downloadAppPanner__content">
+                        <div
+                            class="row align-items-center row-cols-1 row-cols-md-2"
+                        >
+                            <div class="col downloadAppPanner__item">
+                                <span
+                                    data-i18n="downloadAppPannerSubTitle"
+                                    class="downloadAppPanner__item--subTitle"
+                                    >حمّل التطبيق الآن!</span
+                                >
+                                <h2
+                                    data-i18n="downloadAppPannerTitle"
+                                    class="downloadAppPanner__item--title"
+                                >
+                                    واحصل على السيولة بسهولة
+                                </h2>
+                                <div
+                                    class="downloadAppPanner__item--dowenloadApp"
+                                >
+                                    <img
+                                        src="./assets/images/app_store.svg"
+                                        alt="حمّل التطبيق الآن!"
+                                        loading="lazy"
+                                    />
+                                    <img
+                                        src="./assets/images/google_play.svg"
+                                        alt="حمّل التطبيق الآن!"
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col downloadAppPanner__item">
+                                <img
+                                    class="imgPanner"
+                                    src="./assets/images/downloadAPP.png"
+                                    alt="واحصل على السيولة بسهولة"
+                                    loading="lazy"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faqsSection">
+                <div class="container text-center">
+                    <h2 data-i18n="faqsSectionTitle" class="sectionTitle">
+                        الأسئلة الشائعة
+                    </h2>
+                    <div class="faqsSection__allFaqs">
+                        <div
+                            class="accordion accordion-flush"
+                            id="accordionFlushExample"
+                        >
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <span
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne"
+                                        aria-expanded="false"
+                                        aria-controls="flush-collapseOne"
+                                    >
+                                       <div data-i18n="faqItem1-title" dir="ltr"> ؟ Qsalary ما هو تطبيق</div>
+                                    <span/>
+                                </h2>
+                                <div
+                                    id="flush-collapseOne"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample"
+                                >
+                                    <div class="accordion-body">
+                                        امنح موظفيك إمكانية الحصول على مستحقاتهم  بسهولة بما يتوافق مع قوانين حماية الأجور
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <span
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo"
+                                        aria-expanded="false"
+                                        aria-controls="flush-collapseTwo"
+                                    >
+                                        
+                                        <div data-i18n="faqItem2-title" dir="ltr">خدمة قروض؟ Qsalary هل</div>
+                                    <span/>
+                                </h2>
+                                <div
+                                    id="flush-collapseTwo"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample"
+                                >
+                                    <div class="accordion-body">
+                                        امنح موظفيك إمكانية الحصول على مستحقاتهم  بسهولة بما يتوافق مع قوانين حماية الأجور
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <span
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree"
+                                        aria-expanded="false"
+                                        aria-controls="flush-collapseThree"
+                                    >
+                                        
+                                        <div data-i18n="faqItem3-title" dir="ltr">؟Qsalary لمن تطبيقل</div>
+                                    <span/>
+                                </h2>
+                                <div
+                                    id="flush-collapseThree"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample"
+                                >
+                                    <div class="accordion-body">
+                                        امنح موظفيك إمكانية الحصول على مستحقاتهم  بسهولة بما يتوافق مع قوانين حماية الأجور
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <span
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFour"
+                                        aria-expanded="false"
+                                        aria-controls="flush-collapseThree"
+                                    >
+                                        
+                                        <div data-i18n="faqItem4-title" dir="ltr">هل يوجد حد أدنى للرواتب المؤهلة
+                                            للاستفادة من هذا التطبيق؟</div>
+                                    <span/>
+                                </h2>
+                                <div
+                                    id="flush-collapseFour"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample"
+                                >
+                                    <div class="accordion-body">
+                                        امنح موظفيك إمكانية الحصول على مستحقاتهم  بسهولة بما يتوافق مع قوانين حماية الأجور
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <span
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFifht"
+                                        aria-expanded="false"
+                                        aria-controls="flush-collapseThree"
+                                    >
+                                      
+                                        <div data-i18n="faqItem5-title" dir="ltr">هل يوجد حد أدنى لعدد الموظفين في الشركة؟</div>
+                                    <span/>
+                                </h2>
+                                <div
+                                    id="flush-collapseFifht"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample"
+                                >
+                                    <div class="accordion-body">
+                                        امنح موظفيك إمكانية الحصول على مستحقاتهم  بسهولة بما يتوافق مع قوانين حماية الأجور
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button data-i18n="watchMore" class="btn btn-primary">
+                        شـاهد الـمـزيـد
+                    </button>
+                </div>
+            </section>
+
+            <section class="ourSuccessPartnersSection">
+                <div class="container">
+                    <h2 data-i18n="ourSuccessPartnersTitle" class="sectionTitle">شركاء النجاح</h2>
+                    <div class="ourSuccessPartnersSection__content">
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active carouselExampleIndicators" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="carouselExampleIndicators" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <div class="d-flex align-items-center justify-content-center gap-4">
+                                    <img loading="lazy" src="./assets/images/OurPartners1.svg"  alt="شركاء النجاح<">
+                                    <img loading="lazy" src="./assets/images/OurPartners2.svg"  alt="شركاء النجاح<">
+                                    <img loading="lazy" src="./assets/images/OurPartners3.svg"  alt="شركاء النجاح<">
+                                    <img loading="lazy" src="./assets/images/OurPartners4.svg"  alt="شركاء النجاح<">
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <div class="d-flex align-items-center justify-content-center gap-4">
+                                    <img loading="lazy" src="./assets/images/OurPartners1.svg"  alt="شركاء النجاح<">
+                                    <img loading="lazy" src="./assets/images/OurPartners2.svg"  alt="شركاء النجاح<">
+                                    <img loading="lazy" src="./assets/images/OurPartners3.svg"  alt="شركاء النجاح<">
+                                    <img loading="lazy" src="./assets/images/OurPartners4.svg"  alt="شركاء النجاح<">
+                                </div>
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="startNowSection">
+                <div class="container text-center">
+                    <div class="startNowSection__content">
+                        <div class="container">
+                            <h2 data-i18n-subTitle="startNowSectionSubTitle" data-i18n="startNowSectionTitle" data-subTitle="ابدأ الآن" class="sectionTitle">جاهز لتمكين موظفيك
+                                من الوصول إلى رواتبهم المستحقة متى أرادوا؟</h2>
+                            <div class="row row-cols-2 row-cols-md-4 align-items-center justify-content-center g-2">
+                                <div class="col">
+                                    <img loading="lazy" src="./assets/icons/correctIcon.svg" alt="سهل وسريع">
+                                    <span data-i18n="startNowSectionItem1">سهل وسريع</span>
+                                </div>
+                                <div class="col">
+                                    <img loading="lazy" src="./assets/icons/correctIcon.svg" alt="سهل وسريع">
+                                    <span data-i18n="startNowSectionItem2">بشكل آلي</span>
+                                </div>
+                                <div class="col">
+                                    <img loading="lazy" src="./assets/icons/correctIcon.svg" alt="سهل وسريع">
+                                    <span data-i18n="startNowSectionItem3">دون فوائد</span>
+                                </div>
+                                <div class="col">
+                                    <img loading="lazy" src="./assets/icons/correctIcon.svg" alt="سهل وسريع">
+                                    <span data-i18n="startNowSectionItem4">خالي من الضغوطات</span>
+                                </div>
+                            </div>
+                            <button     data-i18n="requsetDemo" class="btn btn-primary">اطلب عرضاً توضيحياً الآن</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="followUsSection">
+                <div class="container">
+                    <div class="row row-cols-1 align-items-center justify-content-between row-cols-md-2 g-4">
                         <div class="col">
-                            <img src="./assets/images/HowQsalaryWork1.svg" alt="">
-                            <h3>سجل شركتك</h3>
-                            <p> ستكون عملية التسجيل سهلة وبسيطة، من غيرQsalary
-                                مع أي تعقيدات أو عراقيل، فقط تواصل معنا.</p>
+                            <h2 data-i18n-subTitle="supscripeSubTitle" data-i18n="supscripeTitle" data-subTitle="ابقى على اطلاع" class="sectionTitle">اشترك بالنشرة البريدية</h2>
+                            <div class="followUsSection__sendEmail">
+                                <input type="email" class="form-control" placeholder="بريدك الإلكتروني" aria-label="بريدك الإلكتروني" aria-describedby="addon-wrapping">
+                                <button data-i18n="subscribeBtn" class="btn btn-outline-primary">إشتراك</button>
+                            </div>
                         </div>
                         <div class="col">
-                            <img src="./assets/images/HowQsalaryWork2.svg" alt="">
-                            <h3>أضف موظفيك</h3>
-                            <p>أضف موظفيك وسجل بياناتهم بنقرات بسيطة، أو اترك لنا هذه المهمة.</p>
-                        </div>
-                        <div class="col">
-                            <img src="./assets/images/HowQsalaryWork3.svg" alt="">
-                            <h3>اختر الحد الأقصى للسحب لكل موظف</h3>
-                            <p> امنح موظفيك إمكانية الحصول على مستحقاتهم  بسهولة بما يتوافق مع قوانين حماية الأجور</p>
+                            <h2 data-i18n-subTitle="socialSubTitle" data-i18n="socialTitle" data-subTitle="تابعنا على" class="sectionTitle">منصات التواصل الإجتماعي</h2>
+                            <div class="followUsSection__sosialIcons">
+                               <img loading="lazy" src="./assets/icons/socialIcon1.svg" alt="socialIcon">
+                               <img loading="lazy" src="./assets/icons/socialIcon2.svg" alt="socialIcon">
+                               <img loading="lazy" src="./assets/icons/socialIcon3.svg" alt="socialIcon">
+                               <img loading="lazy" src="./assets/icons/socialIcon4.svg" alt="socialIcon">
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </section>
 
+        <!-- bootstarp cdn  -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -385,6 +950,7 @@
             integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
             crossorigin="anonymous"
         ></script>
+        <!-- my custom js code  -->
         <script src="./js/script.js"></script>
     </body>
 </html>

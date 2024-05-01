@@ -1,7 +1,7 @@
 // base configuration
 @import "../base/variables", "../base/base";
 // helpers
-@import "../helpers/helper" , "../helpers/mixin";
+@import "../helpers/helper", "../helpers/mixin";
 
 // components that use in this page
 @import "../components/mainButton", "../components/tilteComponents";
@@ -13,12 +13,12 @@
 .heroSection__content {
     width: 100%;
     height: 456px;
-    border-radius:20px;
+    border-radius: 20px;
     margin-top: 20px;
     background-color: $sectionBgColor;
     padding: 0px 80px;
     @include devices(medium) {
-        padding: 15px 15px 0px 15px;
+        padding: 50px 15px 0px 15px;
     }
     @include devices(large) {
         height: auto;
@@ -28,6 +28,9 @@
         img {
             display: block;
             max-width: 450px;
+            @include devices(medium) {
+                max-width: 100%;
+            }
         }
     }
     &--title {
@@ -110,4 +113,341 @@
 .howQsalaryWorkSection {
     background-color: $sectionBgColor;
     padding: 100px 0px;
+    .sectionTitle {
+        max-width: 635px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        &--img {
+            max-width: 247px;
+        }
+        &--title {
+            font-size: 24px;
+            color: $blackColor;
+            font-weight: 500;
+            @include devices(small) {
+                font-size: 20px;
+                font-weight: 600;
+            }
+            [dir="ltr"] & {
+                max-width: 295px;
+                margin: auto;
+            }
+        }
+        &--desc {
+            font-size: 16px;
+            color: $secondTextColor;
+            font-weight: 400;
+            line-height: 25px;
+            margin-top: 20px;
+            max-width: 353px;
+            @include devices(medium) {
+                max-width: 100%;
+            }
+            @include devices(small) {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 27px;
+            }
+        }
+    }
+}
+
+.TakingYourEmployeesSection {
+    .sectionTitle {
+        max-width: 400px;
+    }
+    .row {
+        margin: 50px 0px 50px 0px;
+        row-gap: 20px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        @include devices(small) {
+            gap: 0px;
+        }
+        &--title {
+            font-size: 64px;
+            font-weight: 600;
+            color: #351e15;
+            @include devices(small) {
+                font-size: 40px;
+            }
+        }
+        &--desc {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25px;
+            color: $secondTextColor;
+            max-width: 300px;
+            margin: auto;
+            @include devices(small) {
+                line-height: 28px;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.employeeBenefitsSection {
+    .row {
+        margin: 50px 0px;
+        column-gap: 70px;
+    }
+    &__item {
+        max-width: 380px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        &--img {
+            max-width: 101px;
+            @include devices(small) {
+                max-width: 52px;
+            }
+        }
+        &--title {
+            font-size: 24px;
+            font-family: 500;
+            color: $blackColor;
+            @include devices(small) {
+                font-size: 25px;
+                font-family: 600;
+            }
+        }
+        &--desc {
+            font-size: 16px;
+            font-family: 400;
+            line-height: 25px;
+            color: $secondTextColor;
+            @include devices(small) {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.downloadAppPanner {
+    margin-top: 100px;
+    @include devices(medium) {
+        margin-top: 0px;
+    }
+    &__content {
+        width: 100%;
+        height: 300px;
+        border-radius: 20px;
+        padding-inline: 100px 0px;
+        padding-block: 0px 0px;
+        background-color: $secondSectionBgColor;
+        @include devices(large) {
+            height: auto;
+            padding-inline: 15px 15px;
+            padding-block: 20px 0px;
+        }
+        @include devices(small) {
+            padding-inline: 15px 15px;
+            padding-block: 50px 0px;
+        }
+    }
+    &__item {
+        img.imgPanner {
+            display: block;
+            max-width: 520px;
+            margin-top: -111px;
+            @include devices(large) {
+                margin-top: 30px;
+                max-width: 100%;
+            }
+            @include devices(medium) {
+                margin-top: 30px;
+                max-width: 330px;
+            }
+        }
+        &--title {
+            font-size: 32px;
+            font-weight: 600;
+            color: $whiteColor;
+            margin-top: 10px;
+        }
+        &--subTitle {
+            font-size: 20px;
+            font-weight: 500;
+            color: $whiteColor;
+            @include devices(small) {
+                font-size: 18px;
+            }
+        }
+        &--dowenloadApp {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+            img {
+                max-width: 195px;
+            }
+        }
+    }
+}
+
+.faqsSection {
+    background-color: $sectionBgColor;
+    padding: 70px 0px;
+    &__allFaqs {
+        margin: 40px auto;
+        max-width: 739.98px;
+        .accordion-item {
+            background-color: transparent;
+        }
+        .accordion.accordion-flush {
+            --bs-accordion-bg: transparent;
+        }
+        .accordion-button.collapsed::after {
+            background: url("../../assets/icons/accordionIconOpen.svg")
+                no-repeat;
+            margin-inline-start: auto;
+            margin-inline-end: 0px;
+        }
+        .accordion-button:not(.collapsed)::after {
+            background: url("../../assets/icons/accordionIconOpen.svg")
+                no-repeat;
+            margin-inline-start: auto;
+            margin-inline-end: 0px;
+        }
+        .accordion-body {
+            text-align-last: start;
+        }
+        .accordion-button {
+            div {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.ourSuccessPartnersSection {
+    &__content {
+        .carouselExampleIndicators {
+            width: 6px;
+            height: 6px;
+            background-color: $sectionBgColor;
+            border-radius: 50%;
+        }
+        .carouselExampleIndicators.active {
+            background-color: $mainColor;
+        }
+        .carousel-control-next-icon {
+            background: url("../../assets/icons/ButtonNextslide.svg") no-repeat;
+        }
+        .carousel-control-prev-icon {
+            background: url("../../assets/icons/ButtonPreviousslide.svg")
+                no-repeat;
+        }
+        .carousel-item {
+            img {
+                max-width: 170px;
+            }
+        }
+    }
+}
+
+.startNowSection {
+    &__content {
+        background-color: $sectionBgColor;
+        border-radius: 20px;
+        padding: 80px 0px;
+        position: relative;
+        @include devices(small) {
+            padding: 20px 0px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            border: 5px solid $mainColor;
+            border-radius: 50%;
+        }
+        .row {
+            margin: 40px 0px;
+            column-gap: 40px;
+            row-gap: 20px;
+            .col {
+                width: fit-content;
+                font-family: $mainFont;
+                span {
+                    color: #243673;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+        .sectionTitle {
+            max-width: 672px;
+            font-size: 40px;
+            line-height: 60px;
+            @include devices(small) {
+                font-size: 22px;
+                line-height: 35px;
+            }
+        }
+    }
+}
+
+.followUsSection {
+    .sectionTitle {
+        margin: 0px;
+       text-align: justify;
+        &::before {
+           text-align: justify;
+            max-width: 100%;
+        }
+    }
+    &__sendEmail {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        max-width: 525px;
+        gap: 15px;
+        @include devices(medium) {
+            flex-wrap: wrap;
+        }
+        input {
+            min-height: 48px;
+            background-color: #FAFAFA;
+        }
+    }
+    &__sosialIcons {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        column-gap: 75px;
+        row-gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        @include devices(small) {
+            justify-content: center;
+        }
+        img {
+            max-width: 30px;
+        }
+    }
+    .col:nth-child(2) {
+        .sectionTitle {
+            margin: auto;
+            @include devices(small) {
+                margin: 0px;
+            }
+        }
+    }
 }

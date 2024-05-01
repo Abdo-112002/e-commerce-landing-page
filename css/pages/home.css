@@ -7,6 +7,7 @@
 
 body {
   font-family: var(--mainFont);
+  overflow-x: hidden;
 }
 
 .pageWrapper {
@@ -20,6 +21,12 @@ body {
   font-weight: 500;
   font-size: 14px;
   color: #9057cd !important;
+}
+
+.centerLine {
+  width: 100%;
+  height: 1.5px;
+  background-color: #E2E2E2;
 }
 
 .buttonCom, .btn.btn-outline-primary, .btn.btn-primary {
@@ -54,8 +61,8 @@ body {
 .subTitle, .sectionTitle::before {
   content: attr(data-subTitle);
   display: block;
-  max-width: 130px;
-  margin: 0px auto 15px auto;
+  max-width: 153px;
+  margin: 0px auto 5px auto;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -67,6 +74,10 @@ body {
     font-size: 14px;
     line-height: 22px;
   }
+}
+[dir=ltr] .subTitle, [dir=ltr] .sectionTitle::before {
+  max-width: 100%;
+  font-weight: 600;
 }
 
 .sectionTitle {
@@ -87,6 +98,9 @@ body {
   }
 }
 
+.navbar {
+  z-index: 10;
+}
 .navbar__logo--img {
   max-width: 140px;
 }
@@ -171,7 +185,7 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .heroSection__content {
-    padding: 15px 15px 0px 15px;
+    padding: 50px 15px 0px 15px;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -185,6 +199,11 @@ body {
 .heroSection__content--img img {
   display: block;
   max-width: 450px;
+}
+@media only screen and (max-width: 768px) {
+  .heroSection__content--img img {
+    max-width: 100%;
+  }
 }
 .heroSection__content--title {
   font-size: 48px;
@@ -271,4 +290,363 @@ body {
 .howQsalaryWorkSection {
   background-color: #F6F3FA;
   padding: 100px 0px;
+}
+.howQsalaryWorkSection .sectionTitle {
+  max-width: 635px;
+}
+.howQsalaryWorkSection__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.howQsalaryWorkSection__item--img {
+  max-width: 247px;
+}
+.howQsalaryWorkSection__item--title {
+  font-size: 24px;
+  color: #000000;
+  font-weight: 500;
+}
+@media only screen and (max-width: 576px) {
+  .howQsalaryWorkSection__item--title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+[dir=ltr] .howQsalaryWorkSection__item--title {
+  max-width: 295px;
+  margin: auto;
+}
+.howQsalaryWorkSection__item--desc {
+  font-size: 16px;
+  color: #2b2b2b;
+  font-weight: 400;
+  line-height: 25px;
+  margin-top: 20px;
+  max-width: 353px;
+}
+@media only screen and (max-width: 768px) {
+  .howQsalaryWorkSection__item--desc {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .howQsalaryWorkSection__item--desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27px;
+  }
+}
+
+.TakingYourEmployeesSection .sectionTitle {
+  max-width: 400px;
+}
+.TakingYourEmployeesSection .row {
+  margin: 50px 0px 50px 0px;
+  row-gap: 20px;
+}
+.TakingYourEmployeesSection__item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media only screen and (max-width: 576px) {
+  .TakingYourEmployeesSection__item {
+    gap: 0px;
+  }
+}
+.TakingYourEmployeesSection__item--title {
+  font-size: 64px;
+  font-weight: 600;
+  color: #351e15;
+}
+@media only screen and (max-width: 576px) {
+  .TakingYourEmployeesSection__item--title {
+    font-size: 40px;
+  }
+}
+.TakingYourEmployeesSection__item--desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #2b2b2b;
+  max-width: 300px;
+  margin: auto;
+}
+@media only screen and (max-width: 576px) {
+  .TakingYourEmployeesSection__item--desc {
+    line-height: 28px;
+    max-width: 100%;
+  }
+}
+
+.employeeBenefitsSection .row {
+  margin: 50px 0px;
+  -moz-column-gap: 70px;
+       column-gap: 70px;
+}
+.employeeBenefitsSection__item {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.employeeBenefitsSection__item--img {
+  max-width: 101px;
+}
+@media only screen and (max-width: 576px) {
+  .employeeBenefitsSection__item--img {
+    max-width: 52px;
+  }
+}
+.employeeBenefitsSection__item--title {
+  font-size: 24px;
+  font-family: 500;
+  color: #000000;
+}
+@media only screen and (max-width: 576px) {
+  .employeeBenefitsSection__item--title {
+    font-size: 25px;
+    font-family: 600;
+  }
+}
+.employeeBenefitsSection__item--desc {
+  font-size: 16px;
+  font-family: 400;
+  line-height: 25px;
+  color: #2b2b2b;
+}
+@media only screen and (max-width: 576px) {
+  .employeeBenefitsSection__item--desc {
+    font-size: 15px;
+  }
+}
+
+.downloadAppPanner {
+  margin-top: 100px;
+}
+@media only screen and (max-width: 768px) {
+  .downloadAppPanner {
+    margin-top: 0px;
+  }
+}
+.downloadAppPanner__content {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  padding-inline: 100px 0px;
+  padding-block: 0px 0px;
+  background-color: #3D1E63;
+}
+@media only screen and (max-width: 992px) {
+  .downloadAppPanner__content {
+    height: auto;
+    padding-inline: 15px 15px;
+    padding-block: 20px 0px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .downloadAppPanner__content {
+    padding-inline: 15px 15px;
+    padding-block: 50px 0px;
+  }
+}
+.downloadAppPanner__item img.imgPanner {
+  display: block;
+  max-width: 520px;
+  margin-top: -111px;
+}
+@media only screen and (max-width: 992px) {
+  .downloadAppPanner__item img.imgPanner {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .downloadAppPanner__item img.imgPanner {
+    margin-top: 30px;
+    max-width: 330px;
+  }
+}
+.downloadAppPanner__item--title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 10px;
+}
+.downloadAppPanner__item--subTitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+@media only screen and (max-width: 576px) {
+  .downloadAppPanner__item--subTitle {
+    font-size: 18px;
+  }
+}
+.downloadAppPanner__item--dowenloadApp {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+.downloadAppPanner__item--dowenloadApp img {
+  max-width: 195px;
+}
+
+.faqsSection {
+  background-color: #F6F3FA;
+  padding: 70px 0px;
+}
+.faqsSection__allFaqs {
+  margin: 40px auto;
+  max-width: 739.98px;
+}
+.faqsSection__allFaqs .accordion-item {
+  background-color: transparent;
+}
+.faqsSection__allFaqs .accordion.accordion-flush {
+  --bs-accordion-bg: transparent;
+}
+.faqsSection__allFaqs .accordion-button.collapsed::after {
+  background: url("../../assets/icons/accordionIconOpen.svg") no-repeat;
+  margin-inline-start: auto;
+  margin-inline-end: 0px;
+}
+.faqsSection__allFaqs .accordion-button:not(.collapsed)::after {
+  background: url("../../assets/icons/accordionIconOpen.svg") no-repeat;
+  margin-inline-start: auto;
+  margin-inline-end: 0px;
+}
+.faqsSection__allFaqs .accordion-body {
+  -moz-text-align-last: start;
+       text-align-last: start;
+}
+.faqsSection__allFaqs .accordion-button div {
+  text-decoration: underline;
+}
+
+.ourSuccessPartnersSection__content .carouselExampleIndicators {
+  width: 6px;
+  height: 6px;
+  background-color: #F6F3FA;
+  border-radius: 50%;
+}
+.ourSuccessPartnersSection__content .carouselExampleIndicators.active {
+  background-color: #9057cd;
+}
+.ourSuccessPartnersSection__content .carousel-control-next-icon {
+  background: url("../../assets/icons/ButtonNextslide.svg") no-repeat;
+}
+.ourSuccessPartnersSection__content .carousel-control-prev-icon {
+  background: url("../../assets/icons/ButtonPreviousslide.svg") no-repeat;
+}
+.ourSuccessPartnersSection__content .carousel-item img {
+  max-width: 170px;
+}
+
+.startNowSection__content {
+  background-color: #F6F3FA;
+  border-radius: 20px;
+  padding: 80px 0px;
+  position: relative;
+}
+@media only screen and (max-width: 576px) {
+  .startNowSection__content {
+    padding: 20px 0px;
+  }
+}
+.startNowSection__content::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  border: 5px solid #9057cd;
+  border-radius: 50%;
+}
+.startNowSection__content .row {
+  margin: 40px 0px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 20px;
+}
+.startNowSection__content .row .col {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+.startNowSection__content .row .col span {
+  color: #243673;
+  font-size: 16px;
+  font-weight: 500;
+}
+.startNowSection__content .sectionTitle {
+  max-width: 672px;
+  font-size: 40px;
+  line-height: 60px;
+}
+@media only screen and (max-width: 576px) {
+  .startNowSection__content .sectionTitle {
+    font-size: 22px;
+    line-height: 35px;
+  }
+}
+
+.followUsSection .sectionTitle {
+  margin: 0px;
+  text-align: justify;
+}
+.followUsSection .sectionTitle::before {
+  text-align: justify;
+  max-width: 100%;
+}
+.followUsSection__sendEmail {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  max-width: 525px;
+  gap: 15px;
+}
+@media only screen and (max-width: 768px) {
+  .followUsSection__sendEmail {
+    flex-wrap: wrap;
+  }
+}
+.followUsSection__sendEmail input {
+  min-height: 48px;
+  background-color: #FAFAFA;
+}
+.followUsSection__sosialIcons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 75px;
+       column-gap: 75px;
+  row-gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 576px) {
+  .followUsSection__sosialIcons {
+    justify-content: center;
+  }
+}
+.followUsSection__sosialIcons img {
+  max-width: 30px;
+}
+.followUsSection .col:nth-child(2) .sectionTitle {
+  margin: auto;
+}
+@media only screen and (max-width: 576px) {
+  .followUsSection .col:nth-child(2) .sectionTitle {
+    margin: 0px;
+  }
 }/*# sourceMappingURL=home.css.map */

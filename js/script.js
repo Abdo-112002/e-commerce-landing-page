@@ -33,12 +33,21 @@ const fetchLang = (lang) => {
 
 function changeLang(langData , lang) {
     let allElements = document.querySelectorAll('[data-i18n]');
+    // change all elements
     allElements.forEach((item) => {
         let key = item.getAttribute('data-i18n');
         item.textContent = langData[key];
+        if(item.getAttribute('data-i18n-subTitle')){
+            let subTitleKey = item.getAttribute('data-i18n-subTitle');
+            item.setAttribute("data-subTitle", langData[subTitleKey]);
+        }
     });
+    // change dir page
     document.dir = lang === 'en' ? 'ltr' : "rtl";
+    // change language icon
     langName.textContent = lang === 'en' ? 'العربيه' : "English";
     langIcon.src = lang === 'en' ? "./assets/icons/ar-icon.svg" :  './assets/icons/en-icon.svg';
+    // change site title
+    document.title = lang === 'en' ? "QSalary" : "كيوسالاري";
 }
 

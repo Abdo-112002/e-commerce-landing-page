@@ -3,8 +3,8 @@
 .subTitle {
     content:attr(data-subTitle);
     display: block;
-    max-width: 130px;
-    margin : 0px auto 15px auto;
+    max-width: 153px;
+    margin : 0px auto 5px auto;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -13,6 +13,10 @@
     @include devices(medium) {
         font-size: 14px;
         line-height: 22px;
+    }
+    [dir="ltr"] & {
+        max-width: 100%;
+        font-weight: 600;
     }
 }
 
