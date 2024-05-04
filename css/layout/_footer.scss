@@ -21,14 +21,6 @@
                 max-width: 145px;
             }
         }
-        .copyRigth {
-            display: block;
-            color: $secondTextColor;
-            text-align: end;
-            @include devices(small) {
-                text-align: center;
-            }
-        }
         &--links {
             display: flex;
             align-items: center;
@@ -41,5 +33,18 @@
                 color: #412966ad;
             }
         }
+        .copyRigth {
+            display: block;
+            color: $secondTextColor;
+            text-align: end;
+            @include devices(small) {
+                text-align: center;
+            }
+        }
+    }
+
+    span#lang-name.langName {
+        font-weight: 600;
+        color: #8A4ECA;
     }
 }
